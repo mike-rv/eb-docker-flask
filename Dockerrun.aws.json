@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "matidocs/my-flask-app",
+      "Name": "matidocs/flaskapp",
       "Update": "true"
     },
     "Ports": [
