@@ -5,19 +5,17 @@
 # We're going to use a base image for Python veresion 3.11
 FROM python:3.11
 
+# set a directory for the app
+WORKDIR /usr/src/app
+
+# copy all the files to the container
+COPY . .
+
 # This base image contains essentially everything necessary for a 'virtual
 # computer'. It has a terminal, certain basic commands, and of course Python.
 
 # We run a command to install `pipenv`
 RUN pip install pipenv
-
-# We'll need our app's files in the container in order to be able to run them!
-# We copy them in from the current directory to the folder `/app` in
-# our virtual computer. Reminder `.` means 'the current directory'
-COPY . /app
-
-# We set the working directory for commands from this point on
-WORKDIR /app
 
 # We run `pipenv install` to install our project's dependencies. Since we've
 # copied in our `Pipfile`, `pipenv` will use that to get a list of dependencies.
