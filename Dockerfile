@@ -28,6 +28,9 @@ RUN pipenv install --system --deploy
 # application. And we're not going to! We're just setting up the container
 # so that it's ready to do so when we tell it.
 
+# tell the port number the container should expose
+EXPOSE 5000
+
 # So we're going to tell Docker here that when we _do_ want to run it, this is
 # what it should run:
 CMD ["python", "app.py"]
