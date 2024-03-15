@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello, world!"
+    return "Hello, Potatoes!"
 
 # This condition ensures that the app only runs if this script is executed directly
 if __name__ == '__main__':
